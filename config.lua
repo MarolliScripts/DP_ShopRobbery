@@ -3,8 +3,6 @@ Config = {}
 Config.ShopRob = {
     Rewards = math.random(500, 5000), -- ilość kasy z napadu.
     
-    Webhook = '', -- kanał discord, na który zostaną wysłane informacje o napadach
-    
     Cooldown = 20, -- odstęp między napadami w sekundach (tu: 20 sekund).
     
     Police = 'police', -- nazwa pracy policjantów.
