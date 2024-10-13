@@ -1,9 +1,9 @@
 local playerCooldowns = {}
 local cfg = Config.ShopRob
+local webhook = '' -- kanał discord, na który zostaną wysłane informacje o napadach
 
 ESX.RegisterServerCallback('DP_shoprobbery:firstCheck', function(source, cb)
     local players = ESX.GetPlayers()
-    local webhook = cfg.Webhook
     local licznikpolice = 0 
     local currentTime = os.time() 
     local cooldown = cfg.Cooldown
@@ -29,7 +29,6 @@ ESX.RegisterServerCallback('DP_shoprobbery:firstCheck', function(source, cb)
 end)
 
 ESX.RegisterServerCallback('DP_shoprobbery:getReward', function(source, cb)
-    local webhook = cfg.Webhook
     local xPlayer = ESX.GetPlayerFromId(source)
     if not xPlayer then return end 
 
