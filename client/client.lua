@@ -34,9 +34,11 @@ RegisterNetEvent('DP_shoprobbery:startNapad', function()
         if info == 'brakpolicji' then 
             return ESX.ShowNotification(lang.BrakPD) 
         end
+
         if info == 'cooldown' then 
             return ESX.ShowNotification('Sejf jest pusty. W ciągu '..sekund..' sekund będziesz mógł zrobić napad.') 
         end
+
         if info == true then 
             if cfg.Minigame == true then
                 local success = lib.skillCheck({'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'easy'}, {'w', 'a', 's', 'd'})
@@ -96,10 +98,6 @@ RegisterNetEvent('DP_shoprobbery:startNapad', function()
                     Okradanie = false 
                     ESX.ShowNotification(label.Cancel)
                 end
-                else
-                    Okradanie = false 
-                    ESX.ShowNotification(lang.Fail)
-                end 
             end
         end
     end)
